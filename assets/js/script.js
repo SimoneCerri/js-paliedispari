@@ -41,11 +41,19 @@ let possibleChoise =
     "even",
     "odd"
 ];
-function (userChoose)
+/* possibleChoise.includes(userChoose.toLowerCase()) ? alert(`You choose ${userChoose}`) : alert("Only the word EVEN or ODD are allowed, reload the page and try again.") */
+function knowTheChoice (userChoose)
 {
-    
-}
-possibleChoise.includes(userChoose.toLowerCase()) ? alert(`You choose ${userChoose}`) : alert("Only the word EVEN or ODD are allowed, reload the page and try again.")
+    if (possibleChoise.includes(userChoose.toLowerCase()))
+    {
+        console.log(`User choose ${userChoose}`);
+    }
+    else
+    {
+        console.log(`${userChoose} is not allowed`);
+    }
+};
+console.log(knowTheChoice());
 
 //ask user number between 1 and 5.
 let userNumber = Number(prompt("Choose a number between 1 and 5"));
