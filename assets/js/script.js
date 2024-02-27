@@ -1,4 +1,6 @@
-//### Palindrome: ###
+/* ################### */
+/* ### Palindrome: ### */
+/* ################### */
 
 //ask user to insert a word.
 let userWord = prompt("Give me a word please ! ^^");
@@ -26,7 +28,10 @@ function checkPalindrome(userWord)
 let prova = checkPalindrome(userWord);
 
 
-//### Even or Odd: ###
+
+/* #################### */
+/* ### Even or Odd: ### */
+/* #################### */
 
 //ask user to choose even or odd.
 let userChoose = prompt("Choose between EVEN or ODD !");
