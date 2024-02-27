@@ -35,25 +35,56 @@ let prova = checkPalindrome(userWord);
 
 //ask user to choose even or odd.
 let userChoose = prompt("Choose between EVEN or ODD ! (:");
-console.log(userChoose);
+//console.log(userChoose);
 let possibleChoise =
 [
     "even",
     "odd"
 ];
 /* possibleChoise.includes(userChoose.toLowerCase()) ? alert(`You choose ${userChoose}`) : alert("Only the word EVEN or ODD are allowed, reload the page and try again.") */
+
 function knowTheChoice (userChoose)
 {
     if (possibleChoise.includes(userChoose.toLowerCase()))
     {
         console.log(`User choose ${userChoose}`);
+        alert(`You choose ${userChoose}`);
+        /* if (userChoose.toLowerCase == "even")
+        {
+            let even = true;
+            let odd = false;
+            return even, odd;
+        }
+        else if (userChoose.toLowerCase == "odd")
+        {
+            let even = false;
+            let odd = true;
+            return even, odd;
+        } */
     }
     else
     {
         console.log(`${userChoose} is not allowed`);
+        alert("Only the word EVEN or ODD are allowed, reload the page and try again.");
     }
 };
-console.log(knowTheChoice());
+//console.log(knowTheChoice(userChoose));
+
+let even,odd;
+if (userChoose.toLowerCase() === "even")
+{
+    even = true;
+    odd = false;
+    /* return even, odd; */
+}
+else if (userChoose.toLowerCase() === "odd")
+{
+    even = false;
+    odd = true;
+    /* return even, odd; */
+}
+
+console.log(even, odd);
 
 //ask user number between 1 and 5.
 let userNumber = Number(prompt("Choose a number between 1 and 5"));
@@ -85,4 +116,16 @@ function isEven(sumNumbersVar)
 isEven(sumNumbersVar) ? console.log("EVEN") : console.log("ODD");
 
 //ALERT with winner.
+if (isEven && even)
+{
+    alert("you win even");
+}
+else if (!isEven && odd)
+{
+    alert("you win odd");
+}
+else
+{
+    alert("try again");
+}
 
