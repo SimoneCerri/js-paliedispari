@@ -40,6 +40,10 @@ console.log(userChoose);
 //ask user number between 1 and 5.
 let userNumber = Number(prompt("Choose a number between 1 and 5"));
 console.log(userNumber);
+if (userNumber > 5 || userNumber < 1)
+{
+    alert("Don't trust my patience, i said between 1 and 5.. reload the page and try again.")
+};
 
 //mathrandom between 1 and 5 for npc number.
 let npcNumber = Math.round(Math.random() * (5 - 1) + 1);
