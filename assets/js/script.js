@@ -11,22 +11,30 @@ let long = userWord.length;
 
 function checkPalindrome(userWord)
 {
-    //i found this great solution on google
+    /* let pal = true; */
+    //I found this great solution on google
     for (let i = 0; i < long / 2; i++)
     {
         if (userWord[i] !== userWord[long - 1 - i])
         {
-            alert("This is not a palindrome word");
+            //alert("This is not a palindrome word");
+            /* pal = false; */
             return;
         }
         
     };
-    alert("You insert a palindrome word !");
+    //alert("You insert a palindrome word !");
 };
-
 /* console.log(checkPalindrome(userWord)); */
-let prova = checkPalindrome(userWord);
-
+//let prova = checkPalindrome(userWord);
+if (checkPalindrome(userWord))
+{
+    alert(`You find a new palindrome word : "${userWord}"`);
+}
+else
+{
+    alert(`"${userWord}" is not palindrome`);
+}
 
 
 /* #################### */
@@ -105,7 +113,7 @@ function sumNumbers ()
     return sum ;
 };
 console.log(sumNumbers(npcNumber,userNumber));
-
+let sum = sumNumbers(npcNumber,userNumber);
 
 //understand IF sum is even or odd.
 let sumNumbersVar = sumNumbers(npcNumber,userNumber);
@@ -116,16 +124,16 @@ function isEven(sumNumbersVar)
 isEven(sumNumbersVar) ? console.log("EVEN") : console.log("ODD");
 
 //ALERT with winner.
-if (isEven && even)
+if (isEven(sumNumbersVar) && even)
 {
-    alert("you win even");
+    alert(`You choose ${userChoose} and give ${userNumber} to us. The Nasa's PC randomly choose ${npcNumber} , we add to your number with the result of ${sum}. You win Mr. Kevin Spacey !`);
 }
-else if (!(isEven) && odd)
+else if (!(isEven(sumNumbersVar)) && odd)
 {
-    alert("you win odd");
+    alert(`You choose ${userChoose} and give ${userNumber} to us. The Nasa's PC randomly choose ${npcNumber} , we add to your number with the result of ${sum}. You win Mr. Kevin Spacey !`);
 }
 else
 {
-    alert("try again");
+    alert(`You choose ${userChoose} and give ${userNumber} to us. The Nasa's PC randomly choose ${npcNumber} , we add to your number with the result of ${sum}. Unlucky my friend, try again...`);
 }
 
