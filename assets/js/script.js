@@ -120,7 +120,7 @@ if (isEven && even)
 {
     alert("you win even");
 }
-else if (!isEven && odd)
+else if (!(isEven) && odd)
 {
     alert("you win odd");
 }
