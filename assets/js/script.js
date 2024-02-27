@@ -34,15 +34,25 @@ let prova = checkPalindrome(userWord);
 /* #################### */
 
 //ask user to choose even or odd.
-let userChoose = prompt("Choose between EVEN or ODD !");
+let userChoose = prompt("Choose between EVEN or ODD ! (:");
 console.log(userChoose);
+let possibleChoise =
+[
+    "even",
+    "odd"
+];
+function (userChoose)
+{
+    
+}
+possibleChoise.includes(userChoose.toLowerCase()) ? alert(`You choose ${userChoose}`) : alert("Only the word EVEN or ODD are allowed, reload the page and try again.")
 
 //ask user number between 1 and 5.
 let userNumber = Number(prompt("Choose a number between 1 and 5"));
 console.log(userNumber);
 if (userNumber > 5 || userNumber < 1)
 {
-    alert("Don't trust my patience, i said between 1 and 5.. reload the page and try again.")
+    alert("Don't trust my patience, i said between 1 and 5.. reload the page and try again.. don't make me angry..");
 };
 
 //mathrandom between 1 and 5 for npc number.
